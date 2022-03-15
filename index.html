@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Fast and Furious</title>
     <script src="Player.js"></script>
     <script src="image/background.js"></script>
 </head>
@@ -24,10 +24,26 @@
 <body>
 <img onclick="window.location.reload()" id="gameOver" src="image/gameover.png">
 <canvas id="myCanvas" width="600" height="1000" style="border: 2px solid black"></canvas>
+<canvas id="instruction" width='350' height="400" style="border: 2px solid gray"></canvas>
 
 </body>
 </html>
 <script>
+    let myInstruction = document.getElementById('instruction');
+    let pen = myInstruction.getContext('2d');
+    pen.font = '33px Arial';
+    pen.fillText('How to play', 90, 50);
+    pen.font = '20px Arial';
+    pen.fillText('Click on PRESS START to play', 10, 90);
+    pen.fillText('Press ArrowUp to go up', 10, 120);
+    pen.fillText('Press ArrowDown to go down', 10, 150);
+    pen.fillText('Press ArrowLeft to go left', 10, 180);
+    pen.fillText('Press ArrowRight to go right', 10, 210);
+    pen.fillText('Click on GAME OVER to play again', 10, 240);
+    pen.fillText('Good luck !!!', 10, 300);
+    pen.fillText('Hung Nguyen', 170, 330);
+    pen.fillText('03/16/2022', 200, 360);
+
     let score = 0
     let canvas = document.getElementById('myCanvas');
     let ctx = canvas.getContext('2d');
@@ -58,8 +74,6 @@
         gameStart = true
         audio.play()
     })
-
-    let youlose = false
 
     function drawScore() {
         ctx.font = '50px Impact'
@@ -153,7 +167,7 @@
     }
 
     setInterval(addBackgr, 500)
-    let ỉnterval = setInterval(addCar, 1000)
+    let ỉnterval = setInterval(addCar,700)
     addEventListener("keydown", moveCar)
 
     function main() {

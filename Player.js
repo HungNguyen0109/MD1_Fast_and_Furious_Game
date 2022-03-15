@@ -22,7 +22,7 @@ class Car {
     }
 
     moveUp() {
-        this.y -= 10;
+        this.y -= 5;
     }
 
     moveDown() {

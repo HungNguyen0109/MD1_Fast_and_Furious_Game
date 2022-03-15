@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5398de1d-53bf-4b05-bc9c-9490ed50f9d1" name="Changes" comment="" />
+    <list default="true" id="5398de1d-53bf-4b05-bc9c-9490ed50f9d1" name="Changes" comment="">
+      <change beforePath="F:/MD1_CaseStudy/.idea/workspace.xml" beforeDir="false" afterPath="F:/MD1_CaseStudy/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="F:/MD1_CaseStudy/Player.js" beforeDir="false" afterPath="F:/MD1_CaseStudy/Player.js" afterDir="false" />
+      <change beforePath="F:/MD1_CaseStudy/index.html" beforeDir="false" afterPath="F:/MD1_CaseStudy/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,6 +19,9 @@
         <option value="JavaScript File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="F:/MD1_CaseStudy" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -58,7 +65,9 @@
       <workItem from="1647220333508" duration="10255000" />
       <workItem from="1647231030476" duration="15974000" />
       <workItem from="1647258843949" duration="13434000" />
-      <workItem from="1647305974718" duration="10971000" />
+      <workItem from="1647305974718" duration="11530000" />
+      <workItem from="1647326776292" duration="2565000" />
+      <workItem from="1647353667032" duration="1592000" />
     </task>
     <servers />
   </component>
