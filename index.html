@@ -7,21 +7,22 @@
     <script src="image/background.js"></script>
 </head>
 <style>
-    body{
-        min-height:100%;
-        position:fixed;
-        overflow-y:hidden;
-        overflow-x:hidden;
+    body {
+        min-height: 100%;
+        position: fixed;
+        overflow-y: hidden;
+        overflow-x: hidden;
     }
-    #gameOver{
+
+    #gameOver {
         position: absolute;
         left: 45px;
-        top:300px;
+        top: 300px;
         display: none
     }
 </style>
 <body>
-<img id="gameOver" src="image/gameover.png">
+<img onclick="window.location.reload()" id="gameOver" src="image/gameover.png">
 <canvas id="myCanvas" width="600" height="1000" style="border: 2px solid black"></canvas>
 
 </body>
@@ -48,17 +49,18 @@
     image3.src = 'image/background-1.png';
     image4.src = 'image/SB.png'
     image5.src = 'image/arrow.png'
-    let buttonStart = new Background(image4,200,350,200,100,'image/SB.png')
-    let arrowMove = new Background(image5,200,500,200,100,'image/arrow.png')
+    let buttonStart = new Background(image4, 200, 350, 200, 100, 'image/SB.png')
+    let arrowMove = new Background(image5, 200, 500, 200, 100, 'image/arrow.png')
     let audio2 = new Audio('audio/boom.mp3')
     let audio = new Audio('audio/nhacnen.mp3')
     let gameStart = false;
-    canvas.addEventListener('click',function () {
+    canvas.addEventListener('click', function () {
         gameStart = true
         audio.play()
     })
 
     let youlose = false
+
     function drawScore() {
         ctx.font = '50px Impact'
         ctx.fillStyle = '#f5eee9'
@@ -66,6 +68,7 @@
     }
 
     image.src = car1.src
+
     function drawImage() {
         background[0].drawImage(ctx)
         for (let i = 0; i < background.length; i++) {
@@ -102,6 +105,7 @@
                 car1.dir = "";
         }
     }
+
     //Check va chạm
     function checkCollision() {
         for (let i = 0; i < car.length; i++) {
@@ -110,13 +114,7 @@
                 audio2.play()
                 showGameOver();
                 clearInterval(interval);
-                canvas.addEventListener('click',function () {
-                    youlose = true
-                    window.setTimeout(function(){location.reload()},3000)
-                })
-                // alert('Total Point: ' + score + ' !!! Goodluck !!!')
-            }
-            else if (car1.y >= car[i].y) {
+            } else if (car1.y >= car[i].y) {
                 score++
             }
         }
@@ -151,7 +149,7 @@
     }
 
     function addBackgr() {
-            background.push(new Background(image3, 0, -1200, 600, 1200, 'image/background-1.png'));
+        background.push(new Background(image3, 0, -1200, 600, 1200, 'image/background-1.png'));
     }
 
     setInterval(addBackgr, 500)
@@ -166,9 +164,10 @@
         checkCollision();
         requestAnimationFrame(main);
     }
+
     main();
 
     function showGameOver() {
-       document.getElementById('gameOver').style.display = "block";
+        document.getElementById('gameOver').style.display = "block";
     }
 </script>
