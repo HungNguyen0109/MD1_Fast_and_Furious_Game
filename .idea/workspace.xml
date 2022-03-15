@@ -31,6 +31,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="F:/MD1_CaseStudy/image" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -57,7 +58,7 @@
       <workItem from="1647220333508" duration="10255000" />
       <workItem from="1647231030476" duration="15974000" />
       <workItem from="1647258843949" duration="13434000" />
-      <workItem from="1647305974718" duration="5592000" />
+      <workItem from="1647305974718" duration="8300000" />
     </task>
     <servers />
   </component>

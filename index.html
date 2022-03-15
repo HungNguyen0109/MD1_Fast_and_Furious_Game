@@ -15,12 +15,13 @@
     }
     #gameOver{
         position: absolute;
-        left: 50px;
+        left: 45px;
         top:300px;
+        display: none
     }
 </style>
 <body>
-<img id="gameOver" src="image/gameover.png" style="display: none">
+<img id="gameOver" src="image/gameover.png">
 <canvas id="myCanvas" width="600" height="1000" style="border: 2px solid black"></canvas>
 
 </body>
@@ -56,11 +57,14 @@
         gameStart = true
         audio.play()
     })
+
+    let youlose = false
     function drawScore() {
         ctx.font = '50px Impact'
         ctx.fillStyle = '#f5eee9'
         ctx.fillText('Score: ' + score, 225, 70)
     }
+
     image.src = car1.src
     function drawImage() {
         background[0].drawImage(ctx)
@@ -105,9 +109,14 @@
                 audio.pause()
                 audio2.play()
                 showGameOver();
-                window.setTimeout(function(){location.reload()},1000)
+                clearInterval(interval);
+                canvas.addEventListener('click',function () {
+                    youlose = true
+                    window.setTimeout(function(){location.reload()},3000)
+                })
                 // alert('Total Point: ' + score + ' !!! Goodluck !!!')
-            } else if (car1.y >= car[i].y) {
+            }
+            else if (car1.y >= car[i].y) {
                 score++
             }
         }
@@ -146,7 +155,7 @@
     }
 
     setInterval(addBackgr, 500)
-    setInterval(addCar, 1000)
+    let ỉnterval = setInterval(addCar, 1000)
     addEventListener("keydown", moveCar)
 
     function main() {
